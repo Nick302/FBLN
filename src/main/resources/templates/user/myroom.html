@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="|Звание: ${#authentication.getAuthorities()}|"></p>
+User: <span th:text="${#authentication.principal.username}"></span>
+<div th:each="user : ${report}">
+    <a  th:text="| ID: ${user.id}: Report: ${user.report} |">Репорты</a>
+</div>
+</body>
+</html>
